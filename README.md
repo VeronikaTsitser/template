@@ -1,4 +1,4 @@
-# archi_explorer
+# template
 
 A new Flutter project.
 

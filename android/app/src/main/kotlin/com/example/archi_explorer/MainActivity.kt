@@ -1,4 +1,4 @@
-package com.example.archi_explorer
+package com.example.template
 
 import io.flutter.embedding.android.FlutterActivity
 

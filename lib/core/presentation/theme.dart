@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 ThemeData get darkTheme => ThemeData(
       useMaterial3: false,
       scaffoldBackgroundColor: AppColors.bg,
       primaryColor: AppColors.primary,
-      textTheme: GoogleFonts.robotoFlexTextTheme(),
+      // textTheme: GoogleFonts.robotoFlexTextTheme(),//TODO
       appBarTheme: AppBarTheme(
         backgroundColor: AppColors.bg,
         elevation: 0,

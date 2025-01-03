@@ -1,8 +1,7 @@
-import 'package:archi_explorer/core/presentation/theme.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:template/core/presentation/theme.dart';
 
 class NavBarWidget extends StatelessWidget {
   const NavBarWidget({super.key});
@@ -72,7 +71,7 @@ class NavBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return isSelected
         ? Container(
-            padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
+            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(16)),
               color: AppColors.primary,
@@ -84,7 +83,7 @@ class NavBarItem extends StatelessWidget {
                   iconPath,
                   colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                 ),
-                SizedBox(width: 5.w),
+                SizedBox(width: 5),
                 Text(title, style: AppTextStyle.s11w400.copyWith(color: Colors.white)),
               ],
             ),

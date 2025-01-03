@@ -1,0 +1,28 @@
+{
+  "editor.formatOnSave": true,
+  "[dart]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "editor.formatOnType": true,
+  "editor.rulers": [120],
+  "editor.selectionHighlight": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "onlySnippets",
+  "editor.wordBasedSuggestions": "off",
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 120,
+  "editor.wrappingIndent": "same",
+  "dart.lineLength": 120,
+  "dart.renameFilesWithClasses": "prompt",
+  "githubPullRequests.fileListLayout": "tree",
+  "gitlens.defaultDateLocale": null,
+  "githubPullRequests.pullBranch": "never",
+  "git.ignoreRebaseWarning": true,
+  "git.suggestSmartCommit": false,
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "dart.flutterSdkPath": ".fvm/versions/3.27.0"
+}

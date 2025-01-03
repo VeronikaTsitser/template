@@ -1,41 +1,33 @@
-import 'package:archi_explorer/features/onboarding/domain/models/carousel_item_model.dart';
-import 'package:archi_explorer/features/onboarding/domain/onboarding_repository.dart';
 import 'package:flutter/material.dart';
 
+import '../domain/onboarding_state_enum.dart';
+
 class OnboardingNotifier with ChangeNotifier {
-  OnboardingNotifier(this.repository);
-  final OnboardingRepository repository;
+  OnboardingNotifier();
 
-  Future<void> init() async {
-    await checkIsOnboardingShown();
-  }
+  OnboardingStateEnum _state = OnboardingStateEnum.screen1;
+  OnboardingStateEnum get state => _state;
 
-  int _pageIndex = 0;
-  int get pageIndex => _pageIndex;
-  void setPageIndex(int index) {
-    _pageIndex = index;
-    notifyListeners();
-  }
-
-  final List<CarouselItemModel> _carouselItemsList = [];
-  List<CarouselItemModel> get carouselItemsList => _carouselItemsList;
-
-  Future<void> getItems() async {
-    _carouselItemsList.addAll(await repository.getItems());
-    notifyListeners();
-  }
-
-  bool _isOnboardingShown = false;
-  bool get isOnboardingShown => _isOnboardingShown;
-  void setOnboardingShown() {
-    repository.setOnboardingShown();
-    _isOnboardingShown = true;
-    notifyListeners();
-  }
-
-  Future<void> checkIsOnboardingShown() async {
-    _isOnboardingShown = await repository.isOnboardingShown();
-    if (!_isOnboardingShown) await getItems();
+  void nextState() {
+    switch (_state) {
+      case OnboardingStateEnum.screen1:
+        _state = OnboardingStateEnum.screen2;
+        break;
+      case OnboardingStateEnum.screen2:
+        _state = OnboardingStateEnum.screen3;
+        break;
+      case OnboardingStateEnum.screen3:
+        _state = OnboardingStateEnum.screen4;
+        break;
+      case OnboardingStateEnum.screen4:
+        _state = OnboardingStateEnum.screen5;
+        break;
+      case OnboardingStateEnum.screen5:
+        _state = OnboardingStateEnum.paywall;
+        break;
+      case OnboardingStateEnum.paywall:
+        break;
+    }
     notifyListeners();
   }
 }
