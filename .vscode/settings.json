@@ -7,7 +7,9 @@
     }
   },
   "editor.formatOnType": true,
-  "editor.rulers": [120],
+  "editor.rulers": [
+    120
+  ],
   "editor.selectionHighlight": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestSelection": "first",
@@ -24,5 +26,5 @@
   "git.ignoreRebaseWarning": true,
   "git.suggestSmartCommit": false,
   "java.configuration.updateBuildConfiguration": "automatic",
-  "dart.flutterSdkPath": ".fvm/versions/3.27.0"
+  "dart.flutterSdkPath": ".fvm/versions/3.27.2"
 }
