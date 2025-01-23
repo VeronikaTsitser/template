@@ -4,13 +4,15 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Project Initialization
 
-A few resources to get you started if this is your first Flutter project:
+#### Rename project if needed
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Update the `name`, `androidPackage`, `iosBundleIdentifier` fields in `pubspec.yaml` file.
+Default values are `template`, `com.example.template`, `com.example.template` for iOS and Android respectively.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Initialize project. It will install dependencies and create necessary files
+
+```bash
+    bash ./scripts/init.sh
+```
