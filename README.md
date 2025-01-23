@@ -8,8 +8,9 @@ A new Flutter project.
 
 #### Rename project if needed
 
-Update the `name`, `androidPackage`, `iosBundleIdentifier` fields in `pubspec.yaml` file.
-Default values are `template`, `com.example.template`, `com.example.template` for iOS and Android respectively.
+Update the project name `name` in `pubspec.yaml` file.
+Update the supported platforms `--platforms` in `/scripts/create_project.sh` script file.
+Update the organization name `--org` in `/scripts/create_project.sh` script file.
 
 #### Initialize project. It will install dependencies and create necessary files
 

@@ -1,7 +1,3 @@
-module:
-  androidPackage: com.example.template
-  iosBundleIdentifier: com.example.template
-
 name: template
 description: "A new Flutter project."
 
