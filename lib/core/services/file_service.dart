@@ -1,30 +1,7 @@
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:permission_handler/permission_handler.dart';
-
-Future<bool> _checkPermission({
-  required Permission permission,
-}) async {
-  final status = await permission.status;
-  log('status: $status');
-  if (status == PermissionStatus.granted || status == PermissionStatus.limited) {
-    return true;
-  }
-  final result = await permission.request();
-  log('result: $result');
-  return result == PermissionStatus.granted || result == PermissionStatus.limited;
-}
-
-Future<bool> checkPermissionCamera() => _checkPermission(permission: Permission.camera);
-
-Future<bool> checkPermissionPhotoGallery() async {
-  return _checkPermission(permission: Permission.photos);
-}
-
-Future<void> requestAppPermissionSettings() => openAppSettings();
 
 Future<List<String>> getImage({required bool fromGallery}) async {
   final picker = ImagePicker();
