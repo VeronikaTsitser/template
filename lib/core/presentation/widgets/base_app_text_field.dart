@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:template/core/presentation/theme.dart';
+
+import '../theme.dart';
 
 class BaseAppTextField<T> extends StatelessWidget {
   const BaseAppTextField({

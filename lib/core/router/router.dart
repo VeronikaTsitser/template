@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:template/features/feed/presentation/feed_screen.dart';
-import 'package:template/features/nav_bar/presentation/home_screen.dart';
-import 'package:template/features/onboarding/presentation/onboarding_screen.dart';
+import '../../features/feed/presentation/feed_screen.dart';
+import '../../features/nav_bar/presentation/home_screen.dart';
+import '../../features/onboarding/presentation/onboarding_screen.dart';
 
 import '../../features/loading/presentation/loading_screen.dart';
 import 'modal_screens/app_bottom_sheet_screen.dart';

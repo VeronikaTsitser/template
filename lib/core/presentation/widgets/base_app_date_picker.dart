@@ -1,7 +1,6 @@
-import 'dart:developer';
-
 import 'package:flutter/cupertino.dart';
-import 'package:template/core/presentation/theme.dart';
+
+import '../theme.dart';
 
 class BaseAppDatePicker extends StatefulWidget {
   const BaseAppDatePicker({super.key, required this.initialDate, this.minimumDate, this.maximumDate});
@@ -103,14 +102,6 @@ class _BaseAppMonthPickerState extends State<BaseAppMonthPicker> {
     );
   }
 }
-
-Future<DateTime?> showAppTimePicker({required BuildContext context, required Widget child}) => showCupertinoModalPopup(
-      context: context,
-      builder: (BuildContext context) => child,
-    ).then((value) {
-      log('value: $value');
-      return value;
-    });
 
 class BaseAppTimePicker extends StatefulWidget {
   const BaseAppTimePicker({

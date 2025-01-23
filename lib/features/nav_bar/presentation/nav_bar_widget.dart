@@ -1,7 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:template/core/presentation/theme.dart';
+
+import '../../../core/presentation/theme.dart';
 
 class NavBarWidget extends StatelessWidget {
   const NavBarWidget({super.key});
@@ -25,29 +26,6 @@ class NavBarWidget extends StatelessWidget {
             isSelected: tabsRouter.activeIndex == 0,
             onTap: () => tabsRouter.setActiveIndex(0),
           ),
-          // NavBarItem(
-          //   title: 'Задачи',
-          //   iconPath: 'assets/svg/bullseye_arrow.svg',
-          //   isSelected: tabsRouter.activeIndex == 1,
-          //   onTap: () => tabsRouter.setActiveIndex(1),
-          // ),
-          // NavBarItem(
-          //     title: 'Продуктивность',
-          //     iconPath: 'assets/svg/presentation_chart_alt.svg',
-          //     isSelected: tabsRouter.activeIndex == 2,
-          //     onTap: () => tabsRouter.setActiveIndex(2)),
-          // NavBarItem(
-          //   title: 'Архив',
-          //   iconPath: 'assets/svg/box_archive.svg',
-          //   isSelected: tabsRouter.activeIndex == 3,
-          //   onTap: () => tabsRouter.setActiveIndex(3),
-          // ),
-          // NavBarItem(
-          //   title: 'Настройки',
-          //   iconPath: 'assets/svg/gear.svg',
-          //   isSelected: tabsRouter.activeIndex == 4,
-          //   onTap: () => tabsRouter.setActiveIndex(4),
-          // ),
         ],
       ),
     );
