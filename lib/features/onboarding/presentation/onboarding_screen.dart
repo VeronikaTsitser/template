@@ -51,13 +51,8 @@ class _ButtonState extends State<_Button> {
     // WidgetsBinding.instance.addPostFrameCallback((_) => profileNotifier.addListener(_onListen));
   }
 
-  void _onListen() => setState(() {});
-
   @override
   Widget build(BuildContext context) {
-    final notifier = context.watch<OnboardingNotifier>();
-    final router = AutoRouter.of(context);
-
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 16),
       // child: MediumButton(
@@ -152,7 +147,6 @@ class _Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final notifier = context.watch<OnboardingNotifier>();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Stack(

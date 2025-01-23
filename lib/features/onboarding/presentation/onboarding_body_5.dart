@@ -46,7 +46,7 @@ class OnboardingBody5 extends StatelessWidget {
   }
 
   static Future<void> onPressed(BuildContext context) async {
-    //TODO
+    // TODO
     // final profileNotifier = context.read<ProfileNotifier>();
     // final onboardingNotifier = context.read<OnboardingNotifier>();
     // await profileNotifier.updateProfile();
