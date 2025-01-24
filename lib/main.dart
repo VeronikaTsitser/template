@@ -8,6 +8,7 @@ import 'core/router/router.dart';
 import 'core/services/local_storage_service/local_storage_service.dart';
 import 'features/loading/data/initialization_repository_impl.dart';
 import 'features/loading/domain/initialization_repository.dart';
+import 'features/loading/logic/initialization_notifier.dart';
 import 'features/onboarding/logic/onboarding_notifier.dart';
 
 void main() {
@@ -38,6 +39,11 @@ class _MyAppState extends State<MyApp> {
         RepositoryProvider<InitializationRepository>(
           create: (context) => InitializationRepositoryImpl(
             context.read<LocalStorageService>(),
+          ),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => InitializationNotifier(
+            context.read<InitializationRepository>(),
           ),
         ),
         ChangeNotifierProvider(create: (context) => OnboardingNotifier()),
