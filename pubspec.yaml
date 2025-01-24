@@ -119,7 +119,32 @@ flutter_intl:
 flutter:
   uses-material-design: true
   generate: true
-  # assets:
-  # - assets/
-  # - assets/json/
-  # - assets/images/
+  assets:
+    - assets/
+    - assets/images/
+    - assets/icons/
+    - assets/images/onboarding/
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/inter/Inter-VariableFont_slnt_wght.ttf
+        - asset: assets/fonts/inter/static/Inter-Black.ttf
+        - asset: assets/fonts/inter/static/Inter-Bold.ttf
+        - asset: assets/fonts/inter/static/Inter-ExtraBold.ttf
+        - asset: assets/fonts/inter/static/Inter-ExtraLight.ttf
+        - asset: assets/fonts/inter/static/Inter-Light.ttf
+        - asset: assets/fonts/inter/static/Inter-Medium.ttf
+        - asset: assets/fonts/inter/static/Inter-Regular.ttf
+        - asset: assets/fonts/inter/static/Inter-SemiBold.ttf
+        - asset: assets/fonts/inter/static/Inter-Thin.ttf
+    - family: Outfit
+      fonts:
+        - asset: assets/fonts/outfit/Outfit-Black.ttf
+        - asset: assets/fonts/outfit/Outfit-Bold.ttf
+        - asset: assets/fonts/outfit/Outfit-ExtraBold.ttf
+        - asset: assets/fonts/outfit/Outfit-ExtraLight.ttf
+        - asset: assets/fonts/outfit/Outfit-Light.ttf
+        - asset: assets/fonts/outfit/Outfit-Medium.ttf
+        - asset: assets/fonts/outfit/Outfit-Regular.ttf
+        - asset: assets/fonts/outfit/Outfit-SemiBold.ttf
+        - asset: assets/fonts/outfit/Outfit-Thin.ttf
