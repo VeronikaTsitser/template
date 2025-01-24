@@ -4,7 +4,7 @@ ThemeData get darkTheme => ThemeData(
       useMaterial3: false,
       scaffoldBackgroundColor: AppColors.bg,
       primaryColor: AppColors.primary,
-      // textTheme: GoogleFonts.robotoFlexTextTheme(),//TODO
+      fontFamily: 'Inter',
       appBarTheme: AppBarTheme(
         backgroundColor: AppColors.bg,
         elevation: 0,
