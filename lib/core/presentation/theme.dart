@@ -64,3 +64,16 @@ abstract final class AppTextStyle {
   static const s12w600 = TextStyle(fontSize: 12, fontWeight: FontWeight.w600, height: 1.33);
   static const s11w400 = TextStyle(fontSize: 11, fontWeight: FontWeight.w400, height: 1.33);
 }
+
+abstract final class AppBorderRadius {
+  static const all28 = BorderRadius.all(Radius.circular(28));
+  static const all24 = BorderRadius.all(Radius.circular(24));
+  static const all20 = BorderRadius.all(Radius.circular(20));
+  static const all16 = BorderRadius.all(Radius.circular(16));
+  static const all9 = BorderRadius.all(Radius.circular(9));
+  static const all8 = BorderRadius.all(Radius.circular(8));
+  static const bottom24 = BorderRadius.vertical(bottom: Radius.circular(24));
+  static const top24 = BorderRadius.vertical(top: Radius.circular(24));
+  static const top20 = BorderRadius.vertical(top: Radius.circular(20));
+  static const top14 = BorderRadius.vertical(top: Radius.circular(14));
+}
