@@ -5,18 +5,18 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "luna",
+      "name": "debug mode",
       "request": "launch",
       "type": "dart"
     },
     {
-      "name": "luna (profile mode)",
+      "name": "profile mode",
       "request": "launch",
       "type": "dart",
       "flutterMode": "profile"
     },
     {
-      "name": "luna (release mode)",
+      "name": "release mode",
       "request": "launch",
       "type": "dart",
       "flutterMode": "release"
