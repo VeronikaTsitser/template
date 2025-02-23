@@ -1,19 +1,35 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 import 'core/localization/localization_config.dart';
+import 'core/logging/app_persistent_logger.dart';
 import 'core/presentation/theme.dart';
 import 'core/router/router.dart';
+import 'core/services/firebase/initialization.dart';
 import 'core/services/local_storage_service/local_storage_service.dart';
 import 'features/loading/data/initialization_repository_impl.dart';
 import 'features/loading/domain/initialization_repository.dart';
 import 'features/loading/logic/initialization_notifier.dart';
 import 'features/onboarding/logic/onboarding_notifier.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runZonedGuarded(
+      () async {
+        WidgetsFlutterBinding.ensureInitialized();
+        SystemChrome.setPreferredOrientations([
+          DeviceOrientation.portraitUp,
+          DeviceOrientation.portraitDown,
+        ]);
+        await initFirebase();
+        await initSaveLogger();
+
+        runApp(const MyApp());
+      },
+      zoneErrorHandler,
+    );
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
