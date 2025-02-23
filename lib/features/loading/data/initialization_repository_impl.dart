@@ -12,15 +12,13 @@ class InitializationRepositoryImpl implements InitializationRepository {
     await _initLocalStorageService();
     await _initAbTestService();
 
-    final pref = _localStorageService.prefs;
-    final isOnboardingShown = pref.getBool(StorageKeys.isOnboardingShownKey) ?? false;
+    final isOnboardingShown = await _localStorageService.getValueAsync<bool>(StorageKeys.isOnboardingShownKey) ?? false;
     return isOnboardingShown ? InitializationEnum.home : InitializationEnum.onboarding;
   }
 
   @override
   Future<void> setOnboardingShown() async {
-    final pref = _localStorageService.prefs;
-    await pref.setBool(StorageKeys.isOnboardingShownKey, true);
+    await _localStorageService.setValue<bool>(StorageKeys.isOnboardingShownKey, true);
   }
 
   Future<void> _initAbTestService() async {
