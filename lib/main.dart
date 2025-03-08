@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 import 'core/localization/localization_config.dart';
@@ -49,10 +48,10 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
+    return MultiProvider(
       providers: [
         Provider<LocalStorageService>(create: (_) => LocalStorageServiceImpl()),
-        RepositoryProvider<InitializationRepository>(
+        Provider<InitializationRepository>(
           create: (context) => InitializationRepositoryImpl(
             context.read<LocalStorageService>(),
           ),

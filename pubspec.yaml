@@ -25,10 +25,10 @@ dependencies:
   auto_route: ^9.2.2
 
   # state management and DI
-  bloc: ^9.0.0
+  # bloc: ^9.0.0
   # bloc_concurrency: ^0.3.0
   provider: ^6.1.2
-  flutter_bloc: ^9.0.0
+  # flutter_bloc: ^9.0.0
 
   # Plugins
   fluttertoast: ^8.2.8
